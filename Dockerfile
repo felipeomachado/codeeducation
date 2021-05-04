@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY main.go .
 
-RUN go build main.go
+RUN go build -ldflags "-w" main.go
 
 FROM scratch
 
